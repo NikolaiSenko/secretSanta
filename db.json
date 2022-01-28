@@ -1,0 +1,20 @@
+{
+  "boxes": [
+    {
+      "id": 1,
+      "name": "box1",
+      "picture": "asdasd",
+      "participantNumbers": 1,
+      "isActiveDraw": false,
+      "isAdmin": true
+    },
+    {
+      "id": 2,
+      "name": "box2",
+      "picture": "asd",
+      "participantNumbers": 1,
+      "isActiveDraw": false,
+      "isAdmin": false
+    }
+  ]
+}
