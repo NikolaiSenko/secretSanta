@@ -1,19 +1,17 @@
 import React, { useState } from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import Navbar from "../components/Navbar";
 import Boxes from "../components/Boxes";
+import Box from "../components/Box";
 
 export default function Navigator() {
-  const user = {"name": {
-    "first": "имя",
-    "second": "фамилия",
-  }}
+  const user = {
+    name: {
+      first: "имя",
+      second: "фамилия",
+    },
+  };
 
   // const [user, setUser] = useState({});
 
@@ -25,17 +23,19 @@ export default function Navigator() {
   return (
     <Router>
       <div>
-
-        { <Navbar user={user} /> }
+        {<Navbar user={user} />}
 
         <Switch>
-          <Route path="/boxes">
-            <Boxes/>
+          <Route path="/boxes/:boxId">
+            <Box />
           </Route>
 
-          <Route path="/">
+          <Route path="/boxes">
+            <Boxes />
           </Route>
-          
+
+          <Route path="/"></Route>
+
           {/* <Route path="/">
             <Login
               onUserReceive={onUserReceive}
@@ -45,7 +45,6 @@ export default function Navigator() {
           {/* <Route path="/">
             <div>main page</div>
           </Route> */}
-
         </Switch>
       </div>
     </Router>
