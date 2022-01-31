@@ -1,0 +1,10 @@
+.boxes-menu{
+    display: flex;
+    justify-content: space-between;
+    max-width: 15rem;
+    margin: 1.5rem auto ;
+}
+.boxes-container {
+    display: flex;
+    gap: 1rem;
+}
